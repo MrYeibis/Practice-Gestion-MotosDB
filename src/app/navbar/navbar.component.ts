@@ -16,12 +16,12 @@ export class NavbarComponent implements OnInit {
 
   currentRoute(){
     setTimeout(() => {
-      if(this.location.path()=="/landing" || this.location.path()=="/"){
+      if(this.location.path()=="/landing" || "/register" || "/login"){
         this.landingPageActive = false;
       } else {
         this.landingPageActive = true;
       }
-    },150);
+    },50);
     
   }
 }
