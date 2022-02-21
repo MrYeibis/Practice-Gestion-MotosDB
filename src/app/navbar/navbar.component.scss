@@ -1,0 +1,38 @@
+.navbar{
+    margin: 0%;
+    padding: 0%;
+    position: fixed;
+    min-height: 40px;
+    width: 100%;
+    background-color: rgb(46, 46, 46);
+}
+
+.nav-link{
+  color:white;
+}
+
+.navbar-brand{
+  color:white;
+}
+
+.nav-item{
+    margin-left: 6%;
+}
+
+@media (max-width: 991px) {
+    .nav-item {
+      margin-left: 0%;
+    }
+  }
+
+.landing{
+    background-color: transparent;
+    .nav-link{
+      color: transparent;
+    }
+    
+    .navbar-brand{
+      color: transparent;
+    }
+    
+}

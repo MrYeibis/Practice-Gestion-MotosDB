@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sistema-gestion-motos": {
+      "hosting": {
+        "GestionMotos": [
+          "sistema-gestion-motos"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sistema-gestion-motos"
+  }
+}

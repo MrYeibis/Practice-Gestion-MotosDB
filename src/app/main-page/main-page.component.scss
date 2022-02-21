@@ -1,0 +1,27 @@
+.initial{
+    height:100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../../assets/static/img/gestion-motos-principal-Img.jpg");
+    color: white;
+}
+
+.main-text{  
+    margin-top: 35vh;  
+    font-size: 5rem;
+}
+
+.buttons{
+    margin-top: 5vh;
+}
+
+.first-btn{
+    margin-right: 10vh;
+    background-color: rgb(132, 245, 128);
+}
+
+.second-btn{
+    background-color: rgb(76, 218, 223);
+}

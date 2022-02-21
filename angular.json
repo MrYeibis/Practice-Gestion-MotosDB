@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "GestionMotos:build:production",
+            "firebaseProject": "sistema-gestion-motos",
+            "firebaseHostingSite": "sistema-gestion-motos"
+          }
         }
       }
     }
