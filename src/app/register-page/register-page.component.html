@@ -1,1 +1,22 @@
-<p>register-page works!</p>
+<div class="primary">
+    <h1 class="init-text">Registrarse</h1>
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+          <a class="register-anchor" href="/login">¿Ya tienes una cuenta? Haz click aquí e inicia sesión</a>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100 back-btn" routerLink="/landing">Volver</button>
+            </div>
+        </div>
+      </form>
+</div>

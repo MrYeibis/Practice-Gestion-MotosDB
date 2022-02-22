@@ -1,19 +1,26 @@
 <div class="primary">
     <h1 class="init-text">Iniciar Sesión</h1>
-    <form>
+    <form [formGroup]="LoginForm" (ngSubmit)="submit()">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="InputEmail" formControlName="email" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-          <a class="register-anchor" onclick="window.location.href='/register'">¿No tienes una cuenta? Haz click aquí y registrate</a>
+          <input type="password" class="form-control" id="InputPassword" formControlName="password">
+          <a class="register-anchor" href="/register">¿No tienes una cuenta? Haz click aquí y registrate</a>
         </div>
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Guardar Usuaro</label>
+          <input type="checkbox" class="form-check-input" id="CheckSaveUser" disabled>
+          <label class="form-check-label" for="exampleCheck1">Guardar Usuario</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row">
+            <div class="col">
+                <button type="submit" [disabled]="!LoginForm.valid"  class="btn btn-primary w-100">Iniciar Sesión</button>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100 back-btn" routerLink="/landing">Volver</button>
+            </div>
+        </div>
       </form>
 </div>

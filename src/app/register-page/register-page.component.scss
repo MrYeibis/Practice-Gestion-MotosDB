@@ -1,0 +1,27 @@
+.primary{
+    height:100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(58, 57, 57);
+    color: white;
+}
+
+.init-text{
+    margin-top: 20vh;
+    margin-bottom: 2vh;
+}
+
+.register-anchor{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-btn{
+    background-color: rgb(252, 139, 105);
+}
+
+form{
+    width: 30vw;
+}
