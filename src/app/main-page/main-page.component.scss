@@ -25,3 +25,9 @@
 .second-btn{
     background-color: rgb(76, 218, 223);
 }
+
+@media (max-width: 991px) {
+    .main-text {
+      font-size:4rem;
+    }
+  }
