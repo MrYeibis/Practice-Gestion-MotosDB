@@ -10,10 +10,6 @@
           <input type="password" class="form-control" id="InputPassword" formControlName="password">
           <a class="register-anchor" href="/register">¿No tienes una cuenta? Haz click aquí y registrate</a>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="CheckSaveUser" disabled>
-          <label class="form-check-label" for="exampleCheck1">Guardar Usuario</label>
-        </div>
         <div class="row">
             <div class="col">
                 <button type="submit" [disabled]="!LoginForm.valid"  class="btn btn-primary w-100">Iniciar Sesión</button>
