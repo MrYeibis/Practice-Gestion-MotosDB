@@ -43,7 +43,7 @@ export class LoginPageComponent implements OnInit {
         error: 'Ha occurido un error'
       })
     ).subscribe(() => {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/principal/init']);
     })
 
   }

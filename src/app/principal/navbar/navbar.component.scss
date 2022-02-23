@@ -19,20 +19,16 @@
     margin-left: 6%;
 }
 
+.sign-out{
+  width: 19vh;
+}
+
 @media (max-width: 991px) {
     .nav-item {
       margin-left: 0%;
     }
   }
 
-.landing{
-    background-color: transparent;
-    .nav-link{
-      color: transparent;
-    }
-    
-    .navbar-brand{
-      color: transparent;
-    }
-    
+a.active{
+  font-weight: bold;
 }

@@ -14,13 +14,14 @@ import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './principal/navbar/navbar.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomePageComponent } from './home-page/home-page.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { PrincipalComponent } from './principal/principal.component';
+import { InitialComponent } from './principal/initial/initial.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HotToastModule } from '@ngneat/hot-toast';
     MainPageComponent,
     LoginPageComponent,
     RegisterPageComponent,
-    HomePageComponent,
+    PrincipalComponent,
+    InitialComponent,
   ],
   imports: [
     BrowserModule,

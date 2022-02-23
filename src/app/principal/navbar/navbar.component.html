@@ -1,16 +1,16 @@
-<nav class="navbar fixed-top navbar-expand-lg" [ngClass]="{ 'landing': landingPageActive==false }">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark position-relative">
     <div class="container-fluid">
-      <a class="navbar-brand" [ngClass]="{ 'minimal-size': landingPageActive==false }">Gestion de Motos</a>
+      <a class="navbar-brand">Gestion de Motos</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-2icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" [ngClass]="{ 'disabled': landingPageActive==false }" href="#">Inicio</a>
+            <a class="nav-link" routerLink="/principal/init" routerLinkActive="active" >Inicio</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" [ngClass]="{ 'disabled': landingPageActive==false }" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Cliente
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -21,7 +21,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" [ngClass]="{ 'disabled': landingPageActive==false }" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Productos / Servicios
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -30,7 +30,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" [ngClass]="{ 'disabled': landingPageActive==false }" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Mover Productos / Servicios
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -38,6 +38,11 @@
                 <li><a class="dropdown-item" href="#">Tipo de Movimiento</a></li>
             </ul>
           </li>
+          <ul class="navbar-nav position-absolute end-0 mx-3">
+            <li class="nav-item">
+              <a class="nav-link sign-out" >Cerrar Sesión</a>
+            </li>
+          </ul>
         </ul>
       </div>
     </div>

@@ -1,0 +1,24 @@
+.primary{
+    height:95.9vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(58, 57, 57);
+    color: white;
+}
+
+.first-text{
+    margin-top: 40vh;
+    font-size: 5rem;
+}
+
+.second-text{
+    font-size: 1.5rem;
+}
+
+@media (max-width: 991px) {
+    .first-text {
+      font-size:4rem;
+    }
+  }
