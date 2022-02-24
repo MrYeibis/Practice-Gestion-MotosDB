@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { PrincipalComponent } from './principal/principal.component';
 import { InitialComponent } from './principal/initial/initial.component';
+import { VerificateComponent } from './verificate/verificate.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { InitialComponent } from './principal/initial/initial.component';
     RegisterPageComponent,
     PrincipalComponent,
     InitialComponent,
+    VerificateComponent,
   ],
   imports: [
     BrowserModule,

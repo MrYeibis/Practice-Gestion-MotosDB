@@ -8,15 +8,18 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 
 import { PERSISTENCE} from '@angular/fire/compat/auth';
 import { AuthGuard } from './guards/auth.guard';
+import { LandingGuard } from './guards/landing.guard';
+import { VerificateComponent } from './verificate/verificate.component';
 
 const routes: Routes = [
   {path:"landing", component: MainPageComponent},
   {path:"register", component: RegisterPageComponent},
   {path:"login", component: LoginPageComponent},
+  {path:"verificate", component: VerificateComponent, canActivate: [LandingGuard]},
   
   {path:"principal", component: PrincipalComponent, canActivate:[AuthGuard],
   children:[{path: 'init', component: InitialComponent}]},
-  {path:"", redirectTo:"landing", pathMatch:"full"}
+  {path:"", redirectTo:"verificate", pathMatch:"full"}
 ];
 
 @NgModule({
