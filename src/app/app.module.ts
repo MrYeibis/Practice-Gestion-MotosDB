@@ -23,6 +23,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
 import { PrincipalComponent } from './principal/principal.component';
 import { InitialComponent } from './principal/initial/initial.component';
 import { VerificateComponent } from './verificate/verificate.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { VerificateComponent } from './verificate/verificate.component';
     providePerformance(() => getPerformance()),
     provideRemoteConfig(() => getRemoteConfig()),
     provideStorage(() => getStorage()),
-    HotToastModule.forRoot()
+    HotToastModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [
     ScreenTrackingService,UserTrackingService

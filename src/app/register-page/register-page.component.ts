@@ -36,13 +36,6 @@ export class RegisterPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get email() {
-    return this.RegisterForm.value.email;
-  }
-
-  get password() {
-    return this.RegisterForm.value.password;
-  }
 
   submit() {
     if (!this.RegisterForm.valid){
