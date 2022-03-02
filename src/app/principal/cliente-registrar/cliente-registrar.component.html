@@ -1,0 +1,38 @@
+<div class="primary">
+    <h1 class="init-text">Registrar Cliente</h1>
+    <form [formGroup]="newCliente" (ngSubmit)="this.crud.addData(newCliente.value)">
+        <div class="mb-3">
+          <label for="IDCliente" class="form-label">ID Tipo De Documento</label>
+          <input type="text" class="form-control" id="IDTipoDocu" formControlName="IDTipoDocu" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="IDCliente" class="form-label">ID De Cliente</label>
+          <input type="text" class="form-control" id="IDCliente" formControlName="IDCliente">
+        </div>
+        <div class="mb-3">
+            <label for="NombreRS" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="NombreRS" formControlName="NombreRS">
+        </div>
+        <div class="mb-3">
+            <label for="IDTipoActividad" class="form-label">ID Tipo De Actividad</label>
+            <input type="text" class="form-control" id="IDTipoActividad" formControlName="IDTipoActividad">
+        </div>
+        <div class="mb-3">
+            <label for="FechaIng" class="form-label">Fecha De Ingreso</label>
+            <input type="text" class="form-control" id="FechaIng" formControlName="FechaIng">
+        </div>
+        <div class="mb-3">
+            <label for="Estado" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="Estado" formControlName="Estado">
+        </div>
+        <div class="mb-3">
+            <label for="Observacion" class="form-label">Observacion</label>
+            <input type="text" class="form-control" id="Observacion" formControlName="Observacion">
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" [disabled]="!newCliente.valid"  class="btn btn-primary w-100">Registrar Cliente</button>
+            </div>
+        </div>
+      </form>
+</div>

@@ -19,11 +19,15 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 import { HotToastModule } from '@ngneat/hot-toast';
 import { PrincipalComponent } from './principal/principal.component';
 import { InitialComponent } from './principal/initial/initial.component';
 import { VerificateComponent } from './verificate/verificate.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClienteRegistrarComponent } from './principal/cliente-registrar/cliente-registrar.component';
+import { ClienteModificarComponent } from './principal/cliente-modificar/cliente-modificar.component';
+
 
 @NgModule({
   declarations: [
@@ -35,12 +39,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PrincipalComponent,
     InitialComponent,
     VerificateComponent,
+    ClienteRegistrarComponent,
+    ClienteModificarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),

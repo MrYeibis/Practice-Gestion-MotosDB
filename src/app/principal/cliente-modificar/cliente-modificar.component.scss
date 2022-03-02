@@ -9,23 +9,23 @@
 }
 
 .init-text{
-    margin-top: 25vh;
-    margin-left: 0vw;
-    margin-bottom: 2vh;
+    margin-top: 18vh;
+    margin-bottom: 4vh;
 }
 
-.register-anchor{
-    text-decoration: none;
-    cursor: pointer;
-}
 
-.back-btn{
-    background-color: rgb(252, 139, 105);
+.list{
+    margin-top:5vh;
+    margin-bottom:5vh;
 }
 
 form{
-    margin-left: 0vw;
-    width: 30vw;
+    width:90%;
+}
+
+.custom-list{
+    background-color: rgb(83, 83, 83);
+    color: white;
 }
 
 @media(max-width: 991px){

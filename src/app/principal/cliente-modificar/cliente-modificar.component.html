@@ -1,0 +1,87 @@
+<div class="primary">
+    <div class="container">
+        <h1 class="init-text">Selector De Modificación</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form class="modify" [formGroup]="modifyCliente">
+                    <div class="mb-3">
+                      <label for="IDCliente" class="form-label" >ID Tipo De Documento</label>
+                      <input type="text" class="form-control" id="IDTipoDocu" formControlName="IDTipoDocu" (ngModel)="this.modifyCliente.controls['IDTipoDocu'].value">
+                    </div>
+                    <div class="mb-3">
+                      <label for="IDCliente" class="form-label">ID De Cliente</label>
+                      <input type="text" class="form-control" id="IDCliente" formControlName="IDCliente" (ngModel)="this.modifyCliente.controls['IDCliente'].value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="NombreRS" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="NombreRS" formControlName="NombreRS" (ngModel)="this.modifyCliente.controls['NombreRS'].value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="IDTipoActividad" class="form-label">ID Tipo De Actividad</label>
+                        <input type="text" class="form-control" id="IDTipoActividad" formControlName="IDTipoActividad" (ngModel)="this.modifyCliente.controls['IDTipoActividad'].value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="FechaIng" class="form-label">Fecha De Ingreso</label>
+                        <input type="text" class="form-control" id="FechaIng" formControlName="FechaIng" (ngModel)="this.modifyCliente.controls['FechaIng'].value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Estado" class="form-label">Estado</label>
+                        <input type="text" class="form-control" id="Estado" formControlName="Estado" (ngModel)="this.modifyCliente.controls['Estado'].value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Observacion" class="form-label">Observacion</label>
+                        <input type="text" class="form-control" id="Observacion" formControlName="Observacion" (ngModel)="this.modifyCliente.controls['Observacion'].value">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary w-100">Editar</button>
+                        </div>
+                    </div>
+                  </form>
+            </div>
+    
+            <div class="col-md-6">
+                <form class="search" [formGroup]="searchCliente" (ngSubmit)="buscar()">
+                    <div class="mb-3">
+                      <label for="IDCliente" class="form-label">ID Del Cliente</label>
+                      <input type="text" id="test" class="form-control" formControlName="IDCliente">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                        </div>
+
+                        <div *ngIf="this.searchCliente.controls['IDCliente'].value != ''">
+                            <ul class="list list-group">
+                                <li *ngFor="let item of data" class="list-group-item custom-list">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                            ID Cliente: {{ item.IDCliente }}
+                                            <br>
+                                            ID Tipo De Documento: {{ item.IDTipoDocu }}
+                                            <br>
+                                            Nombre: {{ item.NombreRS }}
+                                            <br>
+                                            ID Tipo De Actividad: {{ item.IDTipoActividad }}
+                                            <br>
+                                            Fecha De Ingreso: {{ item.FechaIng }}
+                                            <br>
+                                            Estado: {{ item.Estado }}
+                                            <br>
+                                            Observación: {{ item.Observacion }}
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-success btn-sm w-100" (click)="select()">Seleccionar</button>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
