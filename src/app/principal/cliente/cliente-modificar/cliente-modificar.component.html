@@ -33,8 +33,22 @@
                         <input type="text" class="form-control" id="Observacion" formControlName="Observacion" (ngModel)="this.modifyCliente.controls['Observacion'].value">
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary w-100">Editar</button>
+                        <div class="col"> 
+                            <div class="row">
+                                <div class="text-center custom-text">Editar:</div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-custom w-100">Documento</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-custom w-100">Actividad</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-custom w-100">Estado</button>
+                                </div>
+                            </div>
+                            <div class="btn-borrar">
+                                <button class="btn btn-danger w-100" (click)="delete()">Eliminar</button>
+                            </div>
                         </div>
                     </div>
                   </form>

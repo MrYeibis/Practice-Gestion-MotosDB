@@ -25,8 +25,9 @@ import { PrincipalComponent } from './principal/principal.component';
 import { InitialComponent } from './principal/initial/initial.component';
 import { VerificateComponent } from './verificate/verificate.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ClienteRegistrarComponent } from './principal/cliente-registrar/cliente-registrar.component';
-import { ClienteModificarComponent } from './principal/cliente-modificar/cliente-modificar.component';
+import { ClienteRegistrarComponent } from './principal/cliente/cliente-registrar/cliente-registrar.component';
+import { ClienteModificarComponent } from './principal/cliente/cliente-modificar/cliente-modificar.component';
+import { ClienteModificarDocumentoComponent } from './principal/cliente/cliente-modificar-documento/cliente-modificar-documento.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ClienteModificarComponent } from './principal/cliente-modificar/cliente
     VerificateComponent,
     ClienteRegistrarComponent,
     ClienteModificarComponent,
+    ClienteModificarDocumentoComponent,
   ],
   imports: [
     BrowserModule,

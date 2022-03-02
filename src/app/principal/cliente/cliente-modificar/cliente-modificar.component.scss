@@ -9,8 +9,9 @@
 }
 
 .init-text{
-    margin-top: 18vh;
-    margin-bottom: 4vh;
+    text-align: center;
+    margin-top: 13vh;
+    margin-bottom: 5vh;
 }
 
 
@@ -26,6 +27,23 @@ form{
 .custom-list{
     background-color: rgb(83, 83, 83);
     color: white;
+}
+
+.custom-text{
+    margin-bottom: 1.5vh;
+    font-size: 1.5rem;
+}
+
+.second-row{
+    margin-top: 2vh;
+}
+
+.btn-custom{
+    background-color: rgb(255, 246, 125);
+}
+
+.btn-borrar{
+    margin-top: 1vh;
 }
 
 @media(max-width: 991px){

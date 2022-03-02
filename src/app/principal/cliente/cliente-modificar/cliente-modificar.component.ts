@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Firestore, collection, getDocs, query, where } from '@angular/fire/firestore';
 import { DbCrudService } from 'src/app/services/db-crud.service';
 
 @Component({
@@ -8,6 +7,7 @@ import { DbCrudService } from 'src/app/services/db-crud.service';
   templateUrl: './cliente-modificar.component.html',
   styleUrls: ['./cliente-modificar.component.scss']
 })
+
 export class ClienteModificarComponent implements OnInit {
 
   public data: any = [];
@@ -26,22 +26,16 @@ export class ClienteModificarComponent implements OnInit {
     IDCliente: new FormControl('', [Validators.required]),
   })
 
-  constructor(private db: Firestore) {}
+  constructor(private crud: DbCrudService) {}
 
-  ngOnInit(){
-  }
-
-  getData(find: string){
-    const q = query(collection(this.db, 'clientes'), where('IDCliente', '==', find))
-    getDocs(q).then((response) => {
-      this.data = [...response.docs.map((item) => {
-        return {...item.data(), id:item}
-      })]
+  ngOnInit(): void{
+    this.crud.getData$().subscribe( serviceData => {
+      this.data = serviceData;
     })
   }
 
   buscar(){
-    this.getData(this.searchCliente.controls['IDCliente'].value)
+    this.crud.getData(this.searchCliente.controls['IDCliente'].value)
   }
 
   select(){
@@ -54,6 +48,12 @@ export class ClienteModificarComponent implements OnInit {
       this.modifyCliente.controls['Estado'].setValue(item.Estado);
       this.modifyCliente.controls['Observacion'].setValue(item.Observacion);
 
+    }
+  }
+
+  delete(){
+    for(let item of this.data){
+      this.crud.deleteData(item.id.id);
     }
   }
 

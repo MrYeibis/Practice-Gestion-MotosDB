@@ -3,7 +3,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DbCrudService } from 'src/app/services/db-crud.service';
 
 
-
 @Component({
   selector: 'app-cliente-registrar',
   templateUrl: './cliente-registrar.component.html',
