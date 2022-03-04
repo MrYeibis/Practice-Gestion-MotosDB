@@ -12,6 +12,9 @@ import { LandingGuard } from './guards/landing.guard';
 import { VerificateComponent } from './verificate/verificate.component';
 import { ClienteRegistrarComponent } from './principal/cliente/cliente-registrar/cliente-registrar.component';
 import { ClienteModificarComponent } from './principal/cliente/cliente-modificar/cliente-modificar.component';
+import { DocumentoComponent } from './principal/cliente/documento/documento.component';
+import { ActividadComponent } from './principal/cliente/actividad/actividad.component';
+import { EstadoComponent } from './principal/cliente/estado/estado.component';
 
 const routes: Routes = [
   {path:"landing", component: MainPageComponent},
@@ -21,7 +24,10 @@ const routes: Routes = [
   {path:"principal", component: PrincipalComponent, canActivate:[AuthGuard],
   children:[{path: "init", component: InitialComponent},
   {path: "cliente/registrar", component: ClienteRegistrarComponent},
-  {path: "cliente/modificar", component: ClienteModificarComponent}]},
+  {path: "cliente/modificar", component: ClienteModificarComponent},
+  {path: "cliente/modificar/documento", component: DocumentoComponent},
+  {path: "cliente/modificar/actividad", component: ActividadComponent},
+  {path: "cliente/modificar/estado", component: EstadoComponent}]},
   {path:"", redirectTo:"verificate", pathMatch:"full"},
   {path:"**", redirectTo:"verificate", pathMatch:"full"}
 ];

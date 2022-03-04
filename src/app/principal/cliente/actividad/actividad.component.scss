@@ -1,0 +1,34 @@
+.primary{
+    height:100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(58, 57, 57);
+    color: white;
+}
+
+.init-text{
+    margin-top:13vh;
+}
+
+.info-text{
+    margin-top:4vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.custom-list{
+    background-color: rgb(83, 83, 83);
+    color: white;
+}
+
+.list{
+    margin-top:2vh;
+    margin-bottom:1vh;
+}
+
+.btn-exit{
+    margin-top: 1vh;
+}

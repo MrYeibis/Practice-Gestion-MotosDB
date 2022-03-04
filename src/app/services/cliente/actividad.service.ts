@@ -8,7 +8,7 @@ import { Observable, Subject } from 'rxjs';
 })
 
 
-export class DbCrudService {
+export class ActividadService {
 
   public data: any = [];
   private data$: Subject<any[]>;
@@ -27,8 +27,8 @@ export class DbCrudService {
     });
   }
 
-  getData( why: string, find: string, buscar: string){
-    const q = query(collection(this.db, buscar), where(why, '==', find))
+  getData(){
+    const q = collection(this.db, 'tipoActividad')
     getDocs(q).then((response) => {
       this.data = [...response.docs.map((item) => {
         return {...item.data(), id:item}

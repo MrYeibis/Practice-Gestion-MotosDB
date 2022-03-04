@@ -1,9 +1,9 @@
 <div class="primary">
     <h1 class="init-text">Registrar Cliente</h1>
-    <form [formGroup]="newCliente" (ngSubmit)="this.crud.addData(newCliente.value)">
+    <form [formGroup]="newCliente" (ngSubmit)="this.crud.addData(newCliente.value, 'clientes')">
         <div class="mb-3">
           <label for="IDCliente" class="form-label">ID Tipo De Documento</label>
-          <input type="text" class="form-control" id="IDTipoDocu" formControlName="IDTipoDocu" aria-describedby="emailHelp">
+          <select2 class="form-control" [data]="documentoData" formControlName="IDTipoDocu"></select2>
         </div>
         <div class="mb-3">
           <label for="IDCliente" class="form-label">ID De Cliente</label>
@@ -15,7 +15,7 @@
         </div>
         <div class="mb-3">
             <label for="IDTipoActividad" class="form-label">ID Tipo De Actividad</label>
-            <input type="text" class="form-control" id="IDTipoActividad" formControlName="IDTipoActividad">
+            <select2 class="form-control" [data]="actividadData" formControlName="IDTipoActividad"></select2>
         </div>
         <div class="mb-3">
             <label for="FechaIng" class="form-label">Fecha De Ingreso</label>
@@ -23,14 +23,14 @@
         </div>
         <div class="mb-3">
             <label for="Estado" class="form-label">Estado</label>
-            <input type="text" class="form-control" id="Estado" formControlName="Estado">
+            <select2 class="form-control" [data]="estadoData" formControlName="Estado"></select2>
         </div>
         <div class="mb-3">
             <label for="Observacion" class="form-label">Observacion</label>
             <input type="text" class="form-control" id="Observacion" formControlName="Observacion">
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col btn-register">
                 <button type="submit" [disabled]="!newCliente.valid"  class="btn btn-primary w-100">Registrar Cliente</button>
             </div>
         </div>

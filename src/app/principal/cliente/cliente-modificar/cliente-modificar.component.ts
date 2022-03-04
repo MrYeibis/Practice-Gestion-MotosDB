@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Observable, Subject } from 'rxjs';
 import { DbCrudService } from 'src/app/services/db-crud.service';
 
 @Component({
@@ -12,6 +13,10 @@ export class ClienteModificarComponent implements OnInit {
 
   public data: any = [];
 
+  buscarData:string = 'clientes';
+
+  IDBusqueda:string = '';
+
   modifyCliente = new FormGroup({
     IDTipoDocu: new FormControl('', [Validators.required]),
     IDCliente: new FormControl('', [Validators.required]),
@@ -20,6 +25,10 @@ export class ClienteModificarComponent implements OnInit {
     FechaIng: new FormControl('', [Validators.required]),
     Estado: new FormControl('', [Validators.required]),
     Observacion: new FormControl('', [Validators.required])
+  })
+
+  editDocumento = new FormGroup({
+    IDTipoDocu: new FormControl('', [Validators.required]),
   })
 
   searchCliente = new FormGroup({
@@ -31,11 +40,12 @@ export class ClienteModificarComponent implements OnInit {
   ngOnInit(): void{
     this.crud.getData$().subscribe( serviceData => {
       this.data = serviceData;
-    })
+    }) 
   }
 
   buscar(){
-    this.crud.getData(this.searchCliente.controls['IDCliente'].value)
+    this.IDBusqueda = this.searchCliente.controls['IDCliente'].value;
+    this.crud.getData('IDCliente', this.IDBusqueda, this.buscarData)
   }
 
   select(){
@@ -47,13 +57,12 @@ export class ClienteModificarComponent implements OnInit {
       this.modifyCliente.controls['FechaIng'].setValue(item.FechaIng);
       this.modifyCliente.controls['Estado'].setValue(item.Estado);
       this.modifyCliente.controls['Observacion'].setValue(item.Observacion);
-
     }
   }
 
   delete(){
     for(let item of this.data){
-      this.crud.deleteData(item.id.id);
+      this.crud.deleteData(item.id.id, this.buscarData);
     }
   }
 

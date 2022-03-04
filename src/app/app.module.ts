@@ -27,8 +27,10 @@ import { VerificateComponent } from './verificate/verificate.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClienteRegistrarComponent } from './principal/cliente/cliente-registrar/cliente-registrar.component';
 import { ClienteModificarComponent } from './principal/cliente/cliente-modificar/cliente-modificar.component';
-import { ClienteModificarDocumentoComponent } from './principal/cliente/cliente-modificar-documento/cliente-modificar-documento.component';
-
+import { DocumentoComponent } from './principal/cliente/documento/documento.component';
+import { ActividadComponent } from './principal/cliente/actividad/actividad.component';
+import { Select2Module } from 'ng-select2-component';
+import { EstadoComponent } from './principal/cliente/estado/estado.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { ClienteModificarDocumentoComponent } from './principal/cliente/cliente-
     VerificateComponent,
     ClienteRegistrarComponent,
     ClienteModificarComponent,
-    ClienteModificarDocumentoComponent,
+    DocumentoComponent,
+    ActividadComponent,
+    EstadoComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +54,7 @@ import { ClienteModificarDocumentoComponent } from './principal/cliente/cliente-
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    Select2Module,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
