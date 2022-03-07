@@ -21,7 +21,7 @@ export class EstadoService {
   addData(value: any, buscar: string){
     const dbInstance = collection(this.db, buscar);
     addDoc(dbInstance, value).then(() => {
-      this.notifications.success('Se registro correctamente al cliente');
+      this.notifications.success('Se registro correctamente el estado');
     }).catch((err) => {
       this.notifications.error('Error en el registro');
     });
@@ -53,7 +53,7 @@ export class EstadoService {
   deleteData(id: string, buscar: string){
     const dataToDelete = doc(this.db, buscar, id);
     deleteDoc(dataToDelete).then(() => {
-      this.notifications.success('Se elimino correctamente el cliente');
+      this.notifications.success('Se elimino correctamente el estado');
     }).catch((err) => {
       this.notifications.error('Error en el proceso');
     });

@@ -1,0 +1,15 @@
+<div class="primary">
+    <h1 class="init-text">Registrar Nuevo Estado</h1>
+    <form [formGroup]="newEstado">
+        <div class="mb-3">
+          <label for="estado" class="form-label">Estado</label>
+          <input type="text" class="form-control" id="estado" formControlName="estado">
+        </div>
+            <div>
+                <button type="submit" [disabled]="!newEstado.valid"  class="btn btn-success w-100"
+                (click)="this.crud.addData(newEstado.value, 'estado')">Registrar Nuevo Estado</button>
+                <button class="btn btn-modificar btn-primary w-100" routerLink="/principal/cliente/estado/modificar">Modificar Un Estado</button>
+            </div>
+      </form>
+</div>
+

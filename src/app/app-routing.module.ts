@@ -15,6 +15,12 @@ import { ClienteModificarComponent } from './principal/cliente/cliente-modificar
 import { DocumentoComponent } from './principal/cliente/documento/documento.component';
 import { ActividadComponent } from './principal/cliente/actividad/actividad.component';
 import { EstadoComponent } from './principal/cliente/estado/estado.component';
+import { AgregarDocumentoComponent } from './principal/cliente/crudsTipos/documento-crud/agregar-documento/agregar-documento.component';
+import { ModificarDocumentoComponent } from './principal/cliente/crudsTipos/documento-crud/modificar-documento/modificar-documento.component';
+import { AgregarActividadComponent } from './principal/cliente/crudsTipos/actividad-crud/agregar-actividad/agregar-actividad.component';
+import { ModificarActividadComponent } from './principal/cliente/crudsTipos/actividad-crud/modificar-actividad/modificar-actividad.component';
+import { AgregarEstadoComponent } from './principal/cliente/crudsTipos/estado-crud/agregar-estado/agregar-estado.component';
+import { ModificarEstadoComponent } from './principal/cliente/crudsTipos/estado-crud/modificar-estado/modificar-estado.component';
 
 const routes: Routes = [
   {path:"landing", component: MainPageComponent},
@@ -27,7 +33,15 @@ const routes: Routes = [
   {path: "cliente/modificar", component: ClienteModificarComponent},
   {path: "cliente/modificar/documento", component: DocumentoComponent},
   {path: "cliente/modificar/actividad", component: ActividadComponent},
-  {path: "cliente/modificar/estado", component: EstadoComponent}]},
+  {path: "cliente/modificar/estado", component: EstadoComponent},
+  {path: "cliente/documento/agregar", component: AgregarDocumentoComponent},
+  {path: "cliente/documento/modificar", component: ModificarDocumentoComponent},
+  {path: "cliente/actividad/agregar", component: AgregarActividadComponent},
+  {path: "cliente/actividad/modificar", component: ModificarActividadComponent},
+  {path: "cliente/estado/agregar", component: AgregarEstadoComponent},
+  {path: "cliente/estado/modificar", component: ModificarEstadoComponent}
+  
+]},
   {path:"", redirectTo:"verificate", pathMatch:"full"},
   {path:"**", redirectTo:"verificate", pathMatch:"full"}
 ];

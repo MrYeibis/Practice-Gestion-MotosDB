@@ -1,0 +1,58 @@
+.primary{
+    height:100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(58, 57, 57);
+    color: white;
+}
+
+.init-text{
+    text-align: center;
+    margin-top: 30vh;
+    margin-bottom: 5vh;
+}
+
+
+.list{
+    margin-top:3vh;
+    margin-bottom:3vh;
+}
+
+form{
+    width:90%;
+}
+
+.custom-list{
+    background-color: rgb(83, 83, 83);
+    color: white;
+}
+
+.custom-text{
+    margin-bottom: 1.5vh;
+    font-size: 1.5rem;
+}
+
+.second-row{
+    margin-top: 2vh;
+}
+
+.btn-custom{
+    background-color: rgb(255, 246, 125);
+}
+
+.btn-borrar{
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+.exit{
+    margin-top: 1.5vh;
+}
+
+@media(max-width: 991px){
+    form{
+        width:50vw;
+    }
+}

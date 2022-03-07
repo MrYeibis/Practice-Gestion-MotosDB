@@ -31,6 +31,12 @@ import { DocumentoComponent } from './principal/cliente/documento/documento.comp
 import { ActividadComponent } from './principal/cliente/actividad/actividad.component';
 import { Select2Module } from 'ng-select2-component';
 import { EstadoComponent } from './principal/cliente/estado/estado.component';
+import { AgregarDocumentoComponent } from './principal/cliente/crudsTipos/documento-crud/agregar-documento/agregar-documento.component';
+import { ModificarDocumentoComponent } from './principal/cliente/crudsTipos/documento-crud/modificar-documento/modificar-documento.component';
+import { AgregarActividadComponent } from './principal/cliente/crudsTipos/actividad-crud/agregar-actividad/agregar-actividad.component';
+import { ModificarActividadComponent } from './principal/cliente/crudsTipos/actividad-crud/modificar-actividad/modificar-actividad.component';
+import { AgregarEstadoComponent } from './principal/cliente/crudsTipos/estado-crud/agregar-estado/agregar-estado.component';
+import { ModificarEstadoComponent } from './principal/cliente/crudsTipos/estado-crud/modificar-estado/modificar-estado.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +52,13 @@ import { EstadoComponent } from './principal/cliente/estado/estado.component';
     ClienteModificarComponent,
     DocumentoComponent,
     ActividadComponent,
-    EstadoComponent
+    EstadoComponent,
+    AgregarDocumentoComponent,
+    ModificarDocumentoComponent,
+    AgregarActividadComponent,
+    ModificarActividadComponent,
+    AgregarEstadoComponent,
+    ModificarEstadoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,51 @@
+<div class="primary">
+    <div class="container">
+        <h1 class="init-text">Modificar ID Tipo De Documento    </h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form [formGroup]="editDocument">
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label" >ID Tipo De Documento</label>
+                        <input type="text" class="form-control" id="tipo" formControlName="tipo">
+                      </div>
+                      <div class="btn-borrar">
+                        <button class="btn btn-success w-100" (click)="actualizarData()"
+                        [disabled]="!this.editDocument.valid || this.obtuvoData == false">Actualizar</button>
+                     </div>
+                      <div class="btn-borrar">
+                        <button class="btn btn-danger w-100" (click)="delete()">Eliminar</button>
+                     </div>
+                </form>
+            </div>
+    
+            <div class="col-md-6">
+                <form class="search" [formGroup]="searchDocumento">
+                    <div class="mb-3">
+                      <label for="tipo" class="form-label">ID Tipo De Documento</label>
+                      <input type="text" id="tipo" class="form-control" formControlName="tipo">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary w-100" (click)="buscar()"
+                            [disabled]="!this.searchDocumento.valid">Buscar Y Seleccionar</button>
+                        </div>
+                        <div *ngIf="this.searchDocumento.controls['tipo'].value != '' && this.obtuvoData == true">
+                            <ul class="list list-group">
+                                <li *ngFor="let item of data" class="list-group-item custom-list">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                            ID Tipo De Documento: {{ item.tipo }}
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    <div class="exit">
+                        <button class="btn btn-exit btn-danger w-100" routerLink="/principal/cliente/documento/agregar">Volver a la pestaña registrar</button>
+                    </div>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>

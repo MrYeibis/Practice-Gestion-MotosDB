@@ -1,0 +1,15 @@
+<div class="primary">
+    <h1 class="init-text">Registrar Nuevo Tipo De Actividad</h1>
+    <form [formGroup]="newActividad">
+        <div class="mb-3">
+          <label for="tipo" class="form-label">ID Tipo De Actividad</label>
+          <input type="text" class="form-control" id="tipo" formControlName="tipo">
+        </div>
+            <div>
+                <button type="submit" [disabled]="!newActividad.valid"  class="btn btn-success w-100"
+                (click)="this.crud.addData(newActividad.value, 'tipoActividad')">Registrar Nuevo Tipo De Actividad</button>
+                <button class="btn btn-modificar btn-primary w-100" routerLink="/principal/cliente/actividad/modificar">Modificar Un Tipo De Actividad</button>
+            </div>
+      </form>
+</div>
+

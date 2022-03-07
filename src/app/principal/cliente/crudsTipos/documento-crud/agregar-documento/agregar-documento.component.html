@@ -1,0 +1,15 @@
+<div class="primary">
+    <h1 class="init-text">Registrar Nuevo Tipo De Documento</h1>
+    <form [formGroup]="newDocument">
+        <div class="mb-3">
+          <label for="tipo" class="form-label">ID Tipo De Documento</label>
+          <input type="text" class="form-control" id="tipo" formControlName="tipo">
+        </div>
+            <div>
+                <button type="submit" [disabled]="!newDocument.valid"  class="btn btn-success w-100"
+                (click)="this.crud.addData(newDocument.value, 'tipoDocumento')">Registrar Nuevo Tipo De Documento</button>
+                <button class="btn btn-modificar btn-primary w-100" routerLink="/principal/cliente/documento/modificar">Modificar Un Tipo De Documento</button>
+            </div>
+      </form>
+</div>
+
